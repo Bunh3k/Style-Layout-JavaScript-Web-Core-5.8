@@ -141,6 +141,7 @@ nav {
     font-size: 1rem;
     color: #7e7e82;
     transition: all 0.3s ease;
+    margin-left: 1rem;
 }
 
 
@@ -175,7 +176,7 @@ button:hover {
 
     .services__control {
         margin: 1.5rem;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
     }
 
@@ -274,6 +275,7 @@ button:hover {
     .services__header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .services__action a {
@@ -307,11 +309,6 @@ button:hover {
         gap: 24px;
         overflow: visible;
     }
-
-    .services__btn:nth-child(6) {
-        margin-left: 1rem;
-    }
-
 
     .services__intro .p2,
     .p3 {
