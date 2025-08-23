@@ -8,7 +8,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.whole-container {
+.container {
     width: 100vw;
     height: 100vh;
 }
@@ -24,34 +24,23 @@ nav {
     border-bottom: 1px solid #D9FFF5;
 }
 
-.left-nav,
-.right-nav {
+.nav__left,
+.nav__right {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
 .divider,
-.middle-nav {
+.nav__middle {
     display: none;
 }
 
-.burger-ic,
-.repair-ic,
-.checkstatus-ic,
-.call-ic,
-.chat-ic,
-.profile-ic {
-    width: 40px;
-    height: 40px;
-}
-
-.logo-ic {
-    width: auto;
+.nav__left .icon-btn:nth-of-type(2) {
     height: 50px;
 }
 
-.left-nav::after {
+.nav__left::after {
     content: "";
     display: block;
     width: 2px;
@@ -65,19 +54,18 @@ nav {
         padding: 0 2rem;
     }
 
-    .side-nav {
+    .nav__side {
         display: flex;
         gap: 1rem;
     }
 
-    .middle-nav {
+    .nav__middle {
         display: flex;
         align-items: center;
         gap: 1rem;
     }
 
-
-    .middle-nav::after {
+    .nav__middle::after {
         content: "";
         display: block;
         width: 2px;
@@ -85,7 +73,7 @@ nav {
         background-color: #EAEAEA;
     }
 
-    .left-nav::after {
+    .nav__left::after {
         display: none;
     }
 
@@ -109,14 +97,13 @@ nav {
     padding-top: 24px;
 }
 
-
-
 .services__top h1 {
+    font-size: 28px;
     padding: 0 12px;
     border-left: 4px solid #41F6D7;
 }
 
-.services__action img,
+.services__action button,
 .services__action a {
     display: none;
 }
@@ -144,20 +131,18 @@ nav {
     margin-left: 1rem;
 }
 
-
-
 .services__btn:first-child {
     width: 250px;
-    height: 40px;
-    border-radius: 6px;
     background-color: #FFFFFF;
     border: 2px solid #B8FFEC;
     text-align: left;
-    padding: 0 16px;
-    font-size: 1rem;
-    color: #7E7E82;
+    margin: 0;
 }
 
+button {
+    border: none;
+    background-color: #FFFFFF;
+}
 
 
 button:hover {
@@ -189,6 +174,8 @@ button:hover {
 /* Lower Container Section!!!!!! */
 
 .services__body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
     padding-bottom: 35px;
@@ -196,32 +183,24 @@ button:hover {
 
 .services__intro {
     width: 100%;
+    margin-left: 1rem;
 }
 
-.services__intro p {
+.services__intro p,
+.services__intro span {
     width: 90%;
     letter-spacing: 0.2px;
     line-height: 20px;
-    margin-left: 1rem;
-    margin-bottom: 34px;
     font-weight: 400;
     font-size: 14px;
 }
 
-.services__intro .p2,
-.p3 {
+.services__intro span {
     display: none;
 }
 
-.services__more {
-    display: flex;
-    height: 24px;
-    padding-left: 1rem;
-    gap: 8px;
-    margin-bottom: 1rem;
-}
-
-.services__more a {
+.services__more span {
+    display: inline-block;
     font-weight: 500;
     font-size: 1rem;
     line-height: 24px;
@@ -230,27 +209,35 @@ button:hover {
     color: #1B1C21;
 }
 
-.services__more a:hover {
-    cursor: pointer;
+.services__more {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    gap: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.services__more button {
+    background-color: transparent;
 }
 
 .cps-img {
     width: 100%;
-
 }
 
 @media (min-width: 768px) {
     .services__body {
         display: flex;
+        flex-direction: row;
         align-items: flex-start;
-
     }
 
     .services__intro p {
         margin-bottom: 10px;
     }
 
-    .services__intro .p2,
+    .services__intro span:first-of-type,
     .services__more a {
         display: block;
     }
@@ -291,8 +278,8 @@ button:hover {
         cursor: pointer;
     }
 
-    .services__action img {
-        display: block;
+    .services__action button {
+        display: flex;
         margin-left: 1rem;
         margin-right: 2rem;
     }
@@ -310,13 +297,12 @@ button:hover {
         overflow: visible;
     }
 
-    .services__intro .p2,
-    .p3 {
+    .services__intro span {
         display: block;
     }
 
     .services__intro {
-        margin-left: 1rem;
+        margin-left: 34px;
         font-weight: 400;
         line-height: 20px;
         letter-spacing: 0.2px;
@@ -325,5 +311,14 @@ button:hover {
 
     .services__more {
         margin-top: 2rem;
+    }
+
+    button {
+        background-color: transparent;
+    }
+
+    .icon-btn:hover {
+        background-color: #F8F8F8;
+        border: none;
     }
 }

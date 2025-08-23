@@ -10,22 +10,36 @@
 
 <body>
 
-    <div class="whole-container">
+    <div class="container">
         <nav>
-            <div class="left-nav">
-                <img class="burger-ic" src="ic/burger.svg" alt="option">
+            <div class="nav__left">
+                <button>
+                    <img class="icon-btn" src="ic/burger.svg" alt="option">
+                </button>
                 <div class="divider"></div>
-                <img class="logo-ic" src="ic/Group.svg" alt="logo">
+                <button>
+                    <img class="icon-btn" src="ic/Group.svg" alt="logo">
+                </button>
             </div>
-            <div class="side-nav">
-                <div class="middle-nav">
-                    <img class="call-ic" src="ic/call.svg" alt="call">
-                    <img class="chat-ic" src="ic/chat.svg" alt="chat">
-                    <img class="profile-ic" src="ic/profile.svg" alt="profile">
+            <div class="nav__side">
+                <div class="nav__middle">
+                    <button>
+                        <img class="icon-btn" src="ic/call.svg" alt="call">
+                    </button>
+                    <button>
+                        <img class="icon-btn" src="ic/chat.svg" alt="chat">
+                    </button>
+                    <button>
+                        <img class="icon-btn" src="ic/profile.svg" alt="profile">
+                    </button>
                 </div>
-                <div class="right-nav">
-                    <img class="repair-ic" src="ic/repair.svg" alt="repair">
-                    <img class="checkstatus-ic" src="ic/checkstatus.svg" alt="checkstatus">
+                <div class="nav__right">
+                    <button>
+                        <img class="icon-btn" src="ic/repair.svg" alt="repair">
+                    </button>
+                    <button>
+                        <img class="icon-btn" src="ic/checkstatus.svg" alt="checkstatus">
+                    </button>
                 </div>
             </div>
         </nav>
@@ -37,9 +51,13 @@
                     <h1>Услуги и сервисы</h1>
                     <div class="services__action">
                         <a href="#">Оставить заявку</a>
-                        <img class="repair-ic" src="ic/repair.svg" alt="repair">
+                        <button>
+                            <img class="icon-btn" src="ic/repair.svg" alt="repair">
+                        </button>
                         <a href="#">Статус ремонта</a>
-                        <img class="checkstatus-ic" src="ic/checkstatus.svg" alt="checkstatus">
+                        <button>
+                            <img class="icon-btn" src="ic/checkstatus.svg" alt="checkstatus">
+                        </button>
                     </div>
                 </div>
                 <div class="services__control">
@@ -68,17 +86,20 @@
                 <div class="services__intro">
                     <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
                         отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                    <p class="p2">
-                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p>
-                    <p class="p3">
+                    <span>
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</span>
+                    <span>
                         Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и
                         близким.
-                    </p>
+                    </span>
 
 
                     <div class="services__more">
-                        <img src="ic/expand.svg" alt="expand">
-                        <a href="#">Читать далее</a>
+                        <button class="services__more-btn">
+                            <img class="icon-btn" src="ic/expand.svg" alt="expand">
+
+                        </button>
+                        <span>Читать далее</span>
                     </div>
                 </div>
 
