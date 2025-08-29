@@ -257,8 +257,7 @@ button:hover {
         margin-bottom: 10px;
     }
 
-    .services__intro span:first-of-type,
-    .services__more a {
+    .services__intro span:first-of-type {
         display: block;
     }
 
